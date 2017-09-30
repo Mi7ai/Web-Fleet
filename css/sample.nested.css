@@ -1,0 +1,44 @@
+body {
+  background-color: rgba(102, 13, 13, 0.9);
+  margin: auto;
+  line-height: normal; }
+
+h1 {
+  text-align: center;
+  color: #e29c14; }
+
+table {
+  border: 2px solid yellow;
+  margin: auto;
+  border-collapse: separate; }
+
+table tr td:first-child {
+  padding-top: 10px; }
+
+#miembros {
+  padding-top: 20px; }
+
+#miembros p {
+  color: white; }
+
+#img {
+  width: 550px;
+  height: auto; }
+
+td {
+  padding: 15px; }
+
+.links {
+  color: white;
+  background-color: #0628dd;
+  border-radius: 5px;
+  padding: 15px;
+  text-decoration: none; }
+
+.links:hover {
+  text-decoration: none !important;
+  color: white; }
+
+#buttons button {
+  display: inherit;
+  margin: auto; }

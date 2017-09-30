@@ -1,0 +1,57 @@
+@mixin linkBackground {
+    background-color: rgb(6, 40, 221);
+    border-radius: 5px;
+    padding: 15px;
+    text-decoration: none;
+}
+body{
+  background-color: rgba(102, 13, 13, 0.9);
+  margin: auto;
+  line-height: normal;
+ }
+h1{
+  text-align: center;
+  color: rgb(226, 156, 20);
+}
+
+table{
+  border: 2px solid yellow;
+  margin: auto;
+  border-collapse: separate;
+}
+table tr td:first-child{
+  padding-top: 10px;
+}
+#miembros{
+  padding-top: 20px;
+}
+#miembros p{
+  color: rgb(255, 255, 255);
+}
+#img {
+  width: 550px;
+  height: auto;
+}
+td{
+  padding: 15px;
+
+}
+.links{
+    color: rgb(255, 255, 255);
+
+   @include linkBackground;
+}
+.links:hover{
+  text-decoration: none !important;
+  color: rgb(255, 255, 255);
+
+}
+
+#buttons button{
+  display: inherit;
+    margin:auto;
+}
+#submit{
+
+
+}
