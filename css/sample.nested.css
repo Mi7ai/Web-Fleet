@@ -1,44 +1,154 @@
+@font-face {
+  font-family: Paint Scratch;
+  src: url(../assets/paint_scratch/PaintScratch.ttf); }
+
+@font-face {
+  font-family: Alexandria;
+  src: url(../assets/alexandria/AlexandriaFLF.ttf); }
+
+@font-face {
+  font-family: Cinzel;
+  src: url(../assets/cinzel/Cinzel-Regular.otf); }
+
 body {
-  background-color: rgba(102, 13, 13, 0.9);
+  background-color: #882005;
   margin: auto;
   line-height: normal; }
 
 h1 {
   text-align: center;
-  color: #e29c14; }
+  color: #e29c14;
+  text-shadow: 1px 1px 5px #D99613;
+  font-family: Paint Scratch;
+  font-size: 3em;
+  padding: 0px 0px 20px 0px; }
 
-table {
-  border: 2px solid yellow;
+#mainGrid {
   margin: auto;
-  border-collapse: separate; }
+  border-collapse: separate;
+  text-align: center; }
 
-table tr td:first-child {
+#mainGrid tr td:first-child {
   padding-top: 10px; }
 
 #miembros {
   padding-top: 20px; }
 
 #miembros p {
-  color: white; }
+  color: white;
+  text-shadow: 2px 2px 5px #ff8121;
+  font-family: Cinzel; }
 
 #img {
   width: 550px;
-  height: auto; }
+  height: auto;
+  -webkit-box-shadow: 2px 2px 15px 1px #42230b;
+  box-shadow: 3px 3px 15px 3px #42230b; }
 
-td {
+#mainGrid td {
   padding: 15px; }
 
 .links {
   color: white;
-  background-color: #0628dd;
+  cursor: pointer;
+  font-family: Cinzel;
   border-radius: 5px;
   padding: 15px;
-  text-decoration: none; }
+  text-decoration: none;
+  background: #a90329;
+  background: -moz-linear-gradient(left, #a90329 0%, #8f0222 44%, #9e2b25 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #a90329), color-stop(44%, #8f0222), color-stop(100%, #9e2b25));
+  background: -webkit-linear-gradient(left, #a90329 0%, #8f0222 44%, #9e2b25 100%);
+  background: -o-linear-gradient(left, #a90329 0%, #8f0222 44%, #9e2b25 100%);
+  background: -ms-linear-gradient(left, #a90329 0%, #8f0222 44%, #9e2b25 100%);
+  background: linear-gradient(to right, #a90329 0%, #8f0222 44%, #9e2b25 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#9e2b25', GradientType=1 );
+  -webkit-box-shadow: 2px 2px 15px 1px #FF8121;
+  box-shadow: 2px 2px 15px 1px #ff8121; }
 
 .links:hover {
-  text-decoration: none !important;
+  text-decoration: none;
+  color: white;
+  box-shadow: 2px 2px 15px 1px #fefefe; }
+
+#registerForm {
+  width: 80%;
+  margin: auto; }
+
+#buttons {
+  text-align: center;
+  display: block;
+  margin: auto;
+  overflow: auto; }
+
+.button {
+  margin: 0 auto; }
+
+.form-group label {
   color: white; }
 
-#buttons button {
-  display: inherit;
-  margin: auto; }
+.payment h5 {
+  float: left;
+  padding-right: 15px;
+  color: white; }
+
+.form-buttons {
+  float: left;
+  color: white; }
+
+.payment {
+  overflow: auto; }
+
+.content {
+  width: 1200px; }
+
+.grid1 {
+  margin: auto;
+  border-collapse: separate;
+  text-align: center;
+  border: 2px solid white;
+  width: 500px;
+  height: 250px; }
+
+.grid1 td {
+  color: white;
+  padding: 10px;
+  border-width: 2px;
+  border-style: inset; }
+
+.control1 {
+  text-align: center;
+  display: block;
+  margin: auto;
+  overflow: auto; }
+
+.control1 .form-group {
+  padding-left: 10px;
+  display: inline-block; }
+
+.control1 .btn.btn-success {
+  padding-left: 10px;
+  margin: 0px 0px 9px 10px;
+  display: inline-block; }
+
+.grid2 {
+  margin: auto;
+  border-collapse: separate;
+  text-align: center;
+  width: 500px;
+  height: 250px; }
+
+.grid2 td {
+  color: white;
+  text-align: center; }
+
+.control2 {
+  text-align: center;
+  display: block;
+  margin: auto;
+  overflow: auto; }
+
+.control2 .btn.btn-success {
+  padding-left: 10px;
+  margin: 0px 0px 9px 10px;
+  display: inline-block; }

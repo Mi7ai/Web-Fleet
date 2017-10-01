@@ -1,25 +1,64 @@
+// ----------------------------------------> MIXINS <----------------------------------------
+
 @mixin linkBackground {
-    background-color: rgb(6, 40, 221);
+    font-family: Cinzel;
     border-radius: 5px;
     padding: 15px;
     text-decoration: none;
+    background: rgba(169,3,41,1);
+    background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(158,43,37,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(158,43,37,1)));
+    background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(158,43,37,1) 100%);
+    background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(158,43,37,1) 100%);
+    background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(158,43,37,1) 100%);
+    background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(158,43,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#9e2b25', GradientType=1 );
+    -webkit-box-shadow: 2px 2px 15px 1px #FF8121;
+    box-shadow: 2px 2px 15px 1px rgb(255, 129, 33);
 }
+@mixin registerButtons {
+  //float:left;
+}
+@mixin mainTable {
+  //border: 2px solid yellow;
+  margin: auto;
+  border-collapse: separate;
+  text-align: center;
+}
+@font-face {
+    font-family: Paint Scratch;
+    src: url(../assets/paint_scratch/PaintScratch.ttf);
+}
+@font-face {
+    font-family: Alexandria;
+    src: url(../assets/alexandria/AlexandriaFLF.ttf);
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url(../assets/cinzel/Cinzel-Regular.otf);
+}
+  // ----------------------------------------> INDEX <----------------------------------------
+
+
 body{
-  background-color: rgba(102, 13, 13, 0.9);
+  background-color: rgba(136, 32, 5, 1);
   margin: auto;
   line-height: normal;
  }
 h1{
   text-align: center;
   color: rgb(226, 156, 20);
+  text-shadow: 1px 1px 5px #D99613;
+  font-family: Paint Scratch;
+  font-size: 3em;
+  padding: 0px 0px 20px 0px;
 }
 
-table{
-  border: 2px solid yellow;
-  margin: auto;
-  border-collapse: separate;
+#mainGrid{
+  @include mainTable;
 }
-table tr td:first-child{
+#mainGrid tr td:first-child{
   padding-top: 10px;
 }
 #miembros{
@@ -27,31 +66,109 @@ table tr td:first-child{
 }
 #miembros p{
   color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgb(255, 129, 33);
+  font-family: Cinzel;
 }
 #img {
   width: 550px;
   height: auto;
+  -webkit-box-shadow: 2px 2px 15px 1px rgb(66, 35, 11);
+  box-shadow: 3px 3px 15px 3px rgb(66, 35, 11);
 }
-td{
+#mainGrid td{
   padding: 15px;
 
 }
 .links{
-    color: rgb(255, 255, 255);
-
-   @include linkBackground;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  @include linkBackground;
 }
 .links:hover{
-  text-decoration: none !important;
+  text-decoration: none ;
   color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 15px 1px rgb(254, 254, 254);
 
 }
-
-#buttons button{
-  display: inherit;
-    margin:auto;
+// ----------------------------------------> REGISTRARSE <----------------------------------------
+#registerForm{
+  width: 80%;
+  margin: auto;
 }
-#submit{
+#buttons {
+  text-align: center;
+  display: block;
+  margin: auto;
+  overflow: auto
+}
+.button{
+  margin: 0 auto;
+ }
+ .form-group label{
+   color: rgb(255, 255, 255);
+ }
 
+ .payment h5{
+   float: left;
+   padding-right: 15px;
+   color: rgb(255, 255, 255);
+ }
+ .form-buttons{
+   float: left;
+   color: rgb(255, 255, 255);
+ }
+.payment{
+   overflow: auto;
+}
+// ----------------------------------------> TABLERO <----------------------------------------
+.content{
+  width: 1200px;
+}
+.grid1{
+  @include mainTable;
+   border: 2px solid white;
+   width: 500px;
+   height: 250px;
 
+}
+.grid1 td{
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-width:2px;
+  border-style:inset;
+}
+.control1{
+  text-align: center;
+  display: block;
+  margin: auto;
+  overflow: auto;
+}
+.control1 .form-group{
+  padding-left: 10px;
+  display: inline-block;
+}
+.control1 .btn.btn-success{
+  padding-left: 10px;
+  margin: 0px 0px 9px 10px;
+  display: inline-block;
+}
+.grid2{
+  @include mainTable;
+  width: 500px;
+  height: 250px;
+}
+.grid2 td{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.control2{
+  text-align: center;
+  display: block;
+  margin: auto;
+  overflow: auto;
+}
+.control2 .btn.btn-success{
+  padding-left: 10px;
+  margin: 0px 0px 9px 10px;
+  display: inline-block;
 }

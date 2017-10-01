@@ -9,56 +9,68 @@
   </head>
   <body>
     <h1>Registro jugadores</h1>
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellido">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Segundo Apellido">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="DNI">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="email">
-      </div>
-      <p>Forma de pago:</p>
+    <form id="registerForm" >
+      <div class="form-group" >
+        <label for="nombreInput">Nombre</label>
+        <input type="text" class="form-control" id="validationCustom03" aria-describedby="emailHelp" placeholder="Nombre" required>
+        <div class="invalid-feedback">Please provide a name!</div>
 
-      <div class="form-buttons">
-        <label class="custom-control custom-radio">
-          <input id="radio1" name="radio" type="radio" class="custom-control-input">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Toggle this custom radio</span>
-        </label>
-        <label class="custom-control custom-radio">
-          <input id="radio2" name="radio" type="radio" class="custom-control-input">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Or toggle this other custom radio</span>
+      </div>
+      <div class="form-group">
+        <label for="appelidoInput">Apellido</label>
+        <input type="text" class="form-control" id="appelidoInput" placeholder="Apellido" required>
+      </div>
+      <div class="form-group">
+        <label for="segundoApellidoInput">Segundo Apellido</label>
+        <input type="text" class="form-control" id="segundoApellidoInput" placeholder="Segundo Apellido">
+      </div>
+      <div class="form-group">
+        <label for="dniInput">DNI</label>
+        <input type="text" class="form-control" id="dniInput" placeholder="DNI" required>
+      </div>
+      <div class="form-group">
+        <label for="emailInput">Email</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="email" required>
+      </div>
+      <div class="payment">
+        <h5>Forma de pago:</h5>
+        <div class="form-buttons" >
+
+          <label class="custom-control custom-radio">
+            <input id="radio1" name="radio" type="radio" class="custom-control-input" required>
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Contrareembolso</span>
           </label>
+          <label class="custom-control custom-radio">
+            <input id="radio2" name="radio" type="radio" class="custom-control-input" required>
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Tarjeta</span>
+          </label>
+          <label class="custom-control custom-radio">
+            <input id="radio3" name="radio" type="radio" class="custom-control-input" required>
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Cheque</span>
+          </label>
+        </div>
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+        <label for="contraseñaInput">Contraseña</label>
+        <input type="password" class="form-control" id="contraseñaInput" placeholder="Contraseña" required>
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+        <label for="repiteContraseñaInput">Repite Contraseña</label>
+        <input type="password" class="form-control" id="repiteContraseñaInput" placeholder="Repite Contraseña" required>
       </div>
       <div id="buttons">
-        <button id="submit" type="submit" class="btn btn-success">Enviar Datos</button>
-        <button type="button" class="btn btn-danger">Borrar Datos</button>
+          <button type="submit" class="btn btn-success">Enviar Datos</button>
+          <button type="reset"  class="btn btn-danger">Borrar Datos</button>
       </div>
 
 
     </form>
+    <div id="footer" >
+
+    </div>
+
   </body>
 </html>
