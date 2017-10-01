@@ -1,5 +1,4 @@
 // ----------------------------------------> MIXINS <----------------------------------------
-
 @mixin linkBackground {
     font-family: Cinzel;
     border-radius: 5px;
@@ -24,6 +23,18 @@
   margin: auto;
   border-collapse: separate;
   text-align: center;
+}
+@mixin coloredCellA {
+  background-color: white;
+  background-color: rgb(56, 48, 190);
+}
+@mixin coloredCellB {
+  background-color: white;
+  background-color: rgb(250, 6, 6);
+}
+@mixin coloredCellD {
+  background-color: white;
+  background-color: rgb(250, 138, 6);
 }
 @font-face {
     font-family: Paint Scratch;
@@ -120,6 +131,7 @@ h1{
 .payment{
    overflow: auto;
 }
+
 // ----------------------------------------> TABLERO <----------------------------------------
 .content{
   width: 1200px;
@@ -171,4 +183,13 @@ h1{
   padding-left: 10px;
   margin: 0px 0px 9px 10px;
   display: inline-block;
+}
+.a1{
+  @include coloredCellA;
+}
+.b2{
+  @include coloredCellB;
+}
+.d4{
+  @include coloredCellD;
 }
